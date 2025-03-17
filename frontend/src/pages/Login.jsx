@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import { EnvelopeIcon, LockClosedIcon } from "@heroicons/react/24/outline";
+import loginImage from "/public/login.svg"
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -97,7 +98,7 @@ const Login = () => {
       </div>
       <div className="w-1/2 flex items-center justify-center bg-blue-200 p-4">
         <img
-          src="/public/login.svg"
+          src={loginImage}
           alt="Login Illustration"
           className="w-3/4 max-w-md"
         />
