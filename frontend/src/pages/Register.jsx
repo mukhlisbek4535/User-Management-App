@@ -30,7 +30,7 @@ const Register = () => {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("http://localhost:5001/register", {
+    fetch("https://user-management-app-6ud8.onrender.com/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, password }),

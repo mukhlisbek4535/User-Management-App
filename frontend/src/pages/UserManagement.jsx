@@ -15,7 +15,9 @@ const UserManagement = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch("http://localhost:5001/users");
+        const response = await fetch(
+          "https://user-management-app-6ud8.onrender.com/users"
+        );
         const data = await response.json();
         setUsers(data);
       } catch (err) {
@@ -55,11 +57,14 @@ const UserManagement = () => {
 
   async function handleBlockUsers() {
     try {
-      const res = await fetch("http://localhost:5001/block", {
-        method: "PUT",
-        headers: getAuthHeaders(),
-        body: JSON.stringify({ userIds: selectedUsers }),
-      });
+      const res = await fetch(
+        "https://user-management-app-6ud8.onrender.com/block",
+        {
+          method: "PUT",
+          headers: getAuthHeaders(),
+          body: JSON.stringify({ userIds: selectedUsers }),
+        }
+      );
 
       const result = await res.json();
 
@@ -72,7 +77,9 @@ const UserManagement = () => {
       }
       console.log(result);
 
-      const response = await fetch("http://localhost:5001/users");
+      const response = await fetch(
+        "https://user-management-app-6ud8.onrender.com/users"
+      );
       const updatedUsers = await response.json();
       setUsers(updatedUsers);
       setSelectedUsers([]);
@@ -83,17 +90,22 @@ const UserManagement = () => {
 
   async function handleUnblockUsers() {
     try {
-      const res = await fetch("http://localhost:5001/unblock", {
-        method: "PUT",
-        headers: getAuthHeaders(),
-        body: JSON.stringify({ userIds: selectedUsers }),
-      });
+      const res = await fetch(
+        "https://user-management-app-6ud8.onrender.com/unblock",
+        {
+          method: "PUT",
+          headers: getAuthHeaders(),
+          body: JSON.stringify({ userIds: selectedUsers }),
+        }
+      );
 
       const result = await res.json();
       console.log(result);
       setStatusModalMessage(result.message);
 
-      const updatedUsers = await fetch("http://localhost:5001/users");
+      const updatedUsers = await fetch(
+        "https://user-management-app-6ud8.onrender.com/users"
+      );
       const data = await updatedUsers.json();
       setUsers(data);
       setSelectedUsers([]);
@@ -104,11 +116,14 @@ const UserManagement = () => {
 
   async function handleDeleteUsers() {
     try {
-      const res = await fetch("http://localhost:5001/delete", {
-        method: "DELETE",
-        headers: getAuthHeaders(),
-        body: JSON.stringify({ userIds: selectedUsers }),
-      });
+      const res = await fetch(
+        "https://user-management-app-6ud8.onrender.com/delete",
+        {
+          method: "DELETE",
+          headers: getAuthHeaders(),
+          body: JSON.stringify({ userIds: selectedUsers }),
+        }
+      );
 
       const result = await res.json();
       console.log(result);
@@ -121,7 +136,9 @@ const UserManagement = () => {
         setStatusModalMessage(result.message);
       }
 
-      const updatedUsers = await fetch("http://localhost:5001/users");
+      const updatedUsers = await fetch(
+        "https://user-management-app-6ud8.onrender.com/users"
+      );
       const data = await updatedUsers.json();
       setUsers(data);
       setSelectedUsers([]);

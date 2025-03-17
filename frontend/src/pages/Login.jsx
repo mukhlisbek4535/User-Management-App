@@ -11,7 +11,7 @@ const Login = () => {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    await fetch("http://localhost:5001/login", {
+    await fetch("https://user-management-app-6ud8.onrender.com/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
