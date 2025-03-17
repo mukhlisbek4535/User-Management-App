@@ -1,6 +1,6 @@
 # Full-Stack User Management System – Itransition Task 4 Submission
 
-This project is a full-stack web application for user management, developed as part of Task 4 submission for Itransition.
+This project is a full-stack web application for user management, developed as part of Task submission.
 
 ## 🌟 Features
 
@@ -41,7 +41,6 @@ git clone https://github.com/your-username/your-repo.git
 # Backend setup
 cd backend
 npm install
-cp .env.example .env
 npm run dev
 
 # Frontend setup
