@@ -16,18 +16,14 @@ This project is a full-stack web application for user management, developed as p
 
 ## 💻 Tech Stack
 
-- Frontend: React / Vite / Tailwind CSS _(adjust if different)_
-- Backend: Node.js / Express _(adjust if different)_
-- Database: MongoDB _(or any other you used)_
-- Hosting: [e.g., Render / Vercel / Somee / etc.]
+- Frontend: React / Vite / Tailwind CSS
+- Backend: Node.js / Express
+- Database: MongoDB 
 
-## 🚀 Live Demo
-
-🔗 [Your deployed project link here]
 
 ## 🎥 Demo Video
 
-📽️ [Your recorded video link here]
+https://youtu.be/WxAQTycSyQI?feature=shared
 
 ## 🧠 Database Index Strategy
 
