@@ -1,4 +1,4 @@
-# Full-Stack User Management System – Itransition Task 4 Submission
+# Full-Stack User Management System
 
 This project is a full-stack web application for user management, developed as part of Task submission.
 
